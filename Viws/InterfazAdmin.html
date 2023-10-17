@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/InterfazAdmin.css">
+    <script src="../Admin.js"></script>
+</head>
+<body>
+    <div id="BarraOpciones">
+        <a class="OpcionesBarra" href="#RegistroUsuarios">Registros</a>
+        <a class="OpcionesBarra" href="#Implemento">Inplementacion De Juego</a>
+        <a class="OpcionesBarra" href="">Salir</a>
+    </div>
+
+    <h1 class="TextWhite" id="Implemento">Agregar Producto</h1>
+    
+    <div id="campAgregacionProd">
+        <div id="SubirImagen">
+            <input type="text" id="InpImg" placeholder="Ingresar URL de la imagen">
+        </div>
+        <h3 class="TextWhite">Ingrese nombre del videojuego</h3>
+        <input type="text" class="InpCuadro" placeholder="Nombre videojuego">
+        <h3 class="TextWhite">Ingrese la descripcion</h3>
+        <input type="text" autocomplete="off" class="InpCuadroD" placeholder="Ingrese descripcion">
+        <br>
+        <button id="BtnAgregar">Agregar</button>
+    </div>
+    <h1 id="RegistroUsuarios" class="TextWhite">Registro</h1>
+    <h1>kbfivewifvi</h1>
+    <script>
+        document.getElementById("BtnAgregar").addEventListener("click", function() {
+            // Obtén todos los elementos de entrada dentro del div "campAgregacionProd"
+            var camposDeEntrada = document.querySelectorAll("#campAgregacionProd input");
+    
+            // Recorre todos los campos y borra su contenido
+            camposDeEntrada.forEach(function(campo) {
+                campo.value = "";
+            });
+        });
+    </script>
+</body>
+</html>
