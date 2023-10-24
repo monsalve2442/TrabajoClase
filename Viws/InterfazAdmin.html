@@ -8,8 +8,8 @@
 <body>
     <div id="BarraOpciones">
         <a class="OpcionesBarra" href="#RegistroUsuarios">Registros</a>
-        <a class="OpcionesBarra" href="#Implemento">Inplementacion De Juego</a>
-        <a class="OpcionesBarra" href="">Salir</a>
+        <a class="OpcionesBarra" href="#Implemento">Agregar Producto</a>
+        <a class="OpcionesBarra" href="Interfaz.html">Salir</a>
     </div>
 
     <h1 class="TextWhite" id="Implemento">Agregar Producto</h1>
@@ -20,13 +20,39 @@
         </div>
         <h3 class="TextWhite">Ingrese nombre del videojuego</h3>
         <input type="text" class="InpCuadro" placeholder="Nombre videojuego">
-        <h3 class="TextWhite">Ingrese la descripcion</h3>
-        <input type="text" autocomplete="off" class="InpCuadroD" placeholder="Ingrese descripcion">
+        <h3 class="TextWhite">Ingrese la descripción</h3>
+        <input type="text" autocomplete="off" id="InpCuadroD" placeholder="Ingrese descripción">
+        <div id="textContainer"></div>
         <br>
         <button id="BtnAgregar">Agregar</button>
     </div>
+
+    <br></br>
+    <div class="Separacion"></div>
+    <br></br>
+
     <h1 id="RegistroUsuarios" class="TextWhite">Registro</h1>
-    <h1>kbfivewifvi</h1>
+
+    <div id="TblRegistro">
+        <table class="table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre(s)</th>
+                    <th>Apellidos</th>
+                    <th>Telefono</th>
+                    <th>Email</th>
+                    <th>Contraseña</th>
+                    <th>ID Rol</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    
+
     <script>
         document.getElementById("BtnAgregar").addEventListener("click", function() {
             // Obtén todos los elementos de entrada dentro del div "campAgregacionProd"
@@ -36,6 +62,14 @@
             camposDeEntrada.forEach(function(campo) {
                 campo.value = "";
             });
+        });
+
+        const inputElement = document.getElementById('InpCuadroD');
+        const textContainer = document.getElementById('textContainer');
+
+        inputElement.addEventListener('input', function () {
+            const inputValue = inputElement.value;
+            textContainer.textContent = inputValue;
         });
     </script>
 </body>
